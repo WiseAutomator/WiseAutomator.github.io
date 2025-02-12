@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>איך אוטומציה עסקית תשדרג לכם את העסק?</title>
+    <style>
+	
+   :root {
+            --primary: #D35400;
+            --secondary: #E67E22;
+            --text: #1f2937;
+            --light: #fdf6f0;
+            --dark: #121212;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--light);
+        }
+
+        .nav {
+            background: var(--dark);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            width: 150px;
+            height: auto;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .header {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--dark);
+            color: white;
+        }
+
+        .header h1 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .portfolio-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 200px;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .portfolio-content {
+            padding: 1.5rem;
+        }
+
+        .portfolio-content h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+			text-align: center;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--light);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            margin: 0.25rem;
+            color: var(--primary);
+        }
+		p{
+			margin-bottom: 1rem;
+		}
+		logoImg{
+			width: 100%;
+			height: -webkit-fill-available;
+			padding: !important 0px;
+		}
+		.nav-logo {
+			width: 393px;
+			height: auto;
+		}
+	@media (max-width: 768px) {
+		.nav-logo {
+			width: 120px;
+		}
+	}
+	article.portfolio-item.aos-init.aos-animate {
+    cursor: pointer;
+}
+
+        body { font-family: Arial, sans-serif; direction: rtl; text-align: right;background-color: #f9f9f9; }
+        h1 {     
+			color: #dd2903;
+			text-align: center; }
+        p { font-size: 18px; color: #333; }
+        .imgC { width: 100%; max-width: 600px; display: block; margin: 10px auto; border-radius: 10px; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <img src="./לוגו.png" alt="WiseAutomator" class="nav-logo logoImg">
+        <a href="./index.html" class="nav-link">חזרה לדף הבית</a>
+    </nav>
+    <div class="container">
+        <h1>העסק שלך תקוע בעבר? הגיע הזמן לשדרג אותו לעידן הדיגיטלי!</h1>
+		<img src="./2.webp" alt="אינטליגנציה מלאכותית" class="imgC">
+		
+        <p>בעלי עסקים יקרים, בואו נדבר רגע בכנות: אם אתם עדיין מעתיקים טלפונים ממיילים לוואטסאפ ידנית, שולחים חשבוניות כמו פעם עם נוצה ודיו (טוב, אולי לא עד כדי כך), או מזכירים ללקוחות לשלם לכם בפתקים – יש לנו חדשות בשבילכם: הגיע הזמן להתקדם!</p>
+        
+        <h2>אז מה זה בעצם אוטומציה?</h2>
+        <p>בקצרה, זו הדרך הכי חכמה להפוך את העסק שלכם למכונה משומנת שעובדת כמעט לבד. במקום שתעשו כל דבר ידנית, מערכות מתקדמות יעשו עבורכם את העבודה. דמיינו שלקוח משאיר פנייה באתר – <strong>בום!</strong> הוא מקבל מייל אוטומטי. הוא לא ענה? המערכת שולחת לו תזכורת. הוא רוצה לשלם? החשבונית כבר מחכה לו במייל. ואתם? אתם בינתיים שותים קפה בשקט.</p>
+
+        <h2>איך זה יועיל לכם?</h2>
+        <ul>
+            <li><strong>פחות בלגן</strong> – לא עוד ניירת, הודעות שנשכחו ולקוחות שמתפספסים.</li>
+            <li><strong>יותר שליטה</strong> – לדעת בדיוק מה קורה בעסק שלכם בכל רגע בלי לבדוק כל שנייה.</li>
+            <li><strong>שירות לקוחות טוב יותר</strong> – לקוחות אוהבים לקבל תגובות מהירות ושירות מדויק. כשיש אוטומציה – הכל קורה בזמן.</li>
+            <li><strong>יותר רווחים, פחות כאבי ראש</strong> – העסק גדל, אבל אתם לא צריכים לעבוד יותר קשה.</li>
+        </ul>
+
+        <p>אז אם העסק שלכם עדיין עובד כמו לפני עשור – הגיע הזמן להתקדם. בואו ניתן לטכנולוגיה לעשות בשבילכם את העבודה, ואתם תתעסקו במה שבאמת חשוב!</p>
+    </div>
+</body>
+</html>
+
+</html>

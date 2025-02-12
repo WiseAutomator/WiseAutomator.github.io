@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="HsFthHzyQcFgwk7GVrk9DTJfr2z4L9jKuJZSXckq7to" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+	<link rel="shortcut icon" href="logoIcon.png?aspect_ratio=1:1&width=48&format=png" type="image/x-icon">
+    <link rel="icon" href="logoIcon.png?aspect_ratio=1:1&width=48&format=png" type="image/x-icon">
+    <title>WiseAutomator | אוטומציות לעסקים חכמים</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+		
+    <style>
+        :root {
+            --primary: #D35400;
+            --secondary: #E67E22;
+            --text: #1f2937;
+            --light: #fdf6f0;
+            --dark: #121212;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+            scroll-behavior: smooth;
+			text-align: center;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text);
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            background: var(--dark);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav-logo {
+            width: 393px;
+            height: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary);
+        }
+
+        .nav-link.portfolio {
+            background: var(--primary);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+        }
+
+        .nav-link.portfolio:hover {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .hero {
+            background: white;
+            color: white;
+            padding: 10% 2rem 6rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 2rem;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            background: var(--secondary);
+        }
+
+        .problems {
+            padding: 4rem 2rem;
+            background: #121212;
+        }
+
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .problem-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-top: 4px solid var(--primary);
+        }
+
+        .benefits {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: white;
+        }
+
+        .benefits h2 {
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefit-item {
+            padding: 1rem;
+        }
+
+        .benefit-item img {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-item h3 {
+            color: var(--primary);
+            margin: 1rem 0;
+        }
+
+        .contact {
+            background: var(--dark);
+            padding: 4rem 2rem;
+            text-align: center;
+            color: white;
+        }
+
+        .contact h2 {
+            color: var(--secondary);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255,255,255,0.9);
+        }
+
+        .contact-form button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: var(--secondary);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .nav {
+                padding: 0.5rem 1rem;
+            }
+
+            .nav-logo {
+                width: 120px;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .nav-link.portfolio {
+                padding: 0.4rem 1rem;
+            }
+        }
+		 .services {
+            padding: 4rem 2rem;
+            background: white;
+        }
+
+        .services h2 {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 3rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        /* Style for the motto section */
+        .motto {
+            background: var(--dark);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: -1px;
+        }
+
+        .motto h2 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .motto .learn-more {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 2px;
+            margin-top: 1rem;
+            transition: color 0.3s;
+        }
+
+        .motto .learn-more:hover {
+            color: var(--secondary);
+        }
+		
+		@media screen and (min-width: 480px) {
+			.logoImg{
+				width: 50% !important;
+			}
+		}
+		.logoImg{
+				width: 100%;
+			}
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <img src="./לוגו.png" alt="WiseAutomator" class="nav-logo">
+        <div class="nav-links">
+            <a href="#contact" class="nav-link">צור קשר</a>
+            <a href="./projects.html" class="nav-link portfolio">תיק עבודות</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+	<div Style="display: grid;grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));gap: 1rem; max-width: 1804px;margin: 0 auto;">
+		<div class="">
+			<img src="./A.webp" style="width: 100%; height: auto; border-radius: 25px; margin-top: 8%;" data-aos="fade-up" />
+		</div>
+		<div class="">
+			<img src="./logoIcon.png" Style="width: 30%; height: auto;" data-aos="fade-up"/>
+			<h1 data-aos="fade-up">נמאס לכם לבזבז זמן על עבודה חוזרת?</h1>
+			<p data-aos="fade-up" data-aos-delay="100" Style="color: var(--dark);">
+			אנחנו ב"וויז אוטומטור" הופכים את המשימות החוזרות והמייגעות לאוטומטיות, כדי שתוכלו להתמקד בדברים החשובים באמת לעסק שלכם
+			</p>
+			<a href="#contact" class="cta-button" data-aos="fade-up" data-aos-delay="200">
+            רוצה לחסוך זמן וכסף?
+			</a>
+		</div>
+	</div>
+		
+    </section>
+    <section class="problems">
+        <div class="problems-grid">
+            <div class="problem-card" data-aos="fade-up">
+                <h3>מבזבזים יותר מדי זמן על ניירת?</h3>
+                <p>
+                    אנחנו יכולים לאחד את כל הטפסים והמסמכים למערכת אחת שעובדת בצורה אוטומטית
+                </p>
+            </div>
+            <div class="problem-card" data-aos="fade-up" data-aos-delay="100">
+                <h3>עושים את אותן פעולות שוב ושוב?</h3>
+                <p>
+                    נבנה בשבילכם מערכת שתבצע את הפעולות החוזרות באופן אוטומטי, 24/6
+                </p>
+            </div>
+            <div class="problem-card" data-aos="fade-up" data-aos-delay="200">
+                <h3>קשה לעקוב אחרי כל המשימות?</h3>
+                <p>
+                    נקים מערכת מסודרת שתנהל את כל המשימות ותתריע כשצריך את תשומת הלב שלכם
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <h2>מה תקבלו?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-item" data-aos="fade-up">
+                <img src="./שעון.png" alt="שעון">
+                <h3>חיסכון בזמן</h3>
+                <p>פחות עבודה ידנית, יותר זמן להתמקד בצמיחת העסק</p>
+            </div>
+            <div class="benefit-item" data-aos="fade-up" data-aos-delay="100">
+                <img src="./כסף.png" alt="כסף">
+                <h3>חיסכון בכסף</h3>
+                <p>הפחתת עלויות תפעול ושכר על ידי ייעול תהליכים</p>
+            </div>
+            <div class="benefit-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="./דיוק.png" alt="דיוק">
+                <h3>פחות טעויות</h3>
+                <p>מערכות אוטומטיות מדויקות יותר מעבודה ידנית</p>
+            </div>
+        </div>
+    </section>
+	<section class="motto">
+		<img src="./logo.png" class="logoImg" Style=" height: auto;" data-aos="fade-up" alt="AI">
+        <h3>אנחנו מאמינים שכל עסק יכול להיות חכם יותר עם הטכנולוגיה הנכונה</h3>
+		 <a href="./blogs.html" class="cta-button" data-aos="fade-up" data-aos-delay="200">
+           אני רוצה לדעת עוד על אוטומציה עסקית!
+        </a>
+    </section>
+
+    <!-- New services section before problems -->
+    <section class="services">
+        <h2>הפתרונות שלנו</h2>
+        <div class="services-grid">
+            <div class="service-card" data-aos="fade-up">
+                <img src="./bot.png" alt="צ'אט בוט">
+                <h3>צ'אט בוטים חכמים</h3>
+                <p>מערכות צ'אט מתקדמות המספקות מענה מיידי ללקוחות שלכם 24/6</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="./crm.png" alt="CRM">
+                <h3>מערכות CRM</h3>
+                <p>ניהול לקוחות חכם עם אוטומציה מובנית לטיפול בליידים ומעקב אחר לקוחות</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="./automated.png" alt="אוטומציה">
+                <h3>אוטומציות עסקיות</h3>
+                <p>אוטומציה של תהליכים עסקיים שחוזרים על עצמם לחיסכון בזמן ומשאבים</p>
+            </div>
+			<div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <img src="./data-transformation.png" alt="AI">
+                <h3>אינטגרציות מערכות</h3>
+                <p>שירותי אינטגרציה המאפשרים חיבור בין מערכות קיימות בעסק שלך לצורך שיפור תהליכים ויעילות מרבית.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <img src="./AI.png" alt="AI">
+                <h3>פתרונות AI</h3>
+                <p>שילוב מערכות בינה מלאכותית מתקדמות לייעול תהליכים וקבלת החלטות</p>
+            </div>
+			<div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <img src="./landing-page.png" alt="AI">
+                <h3>דפי נחיתה וטפסים מקוונים</h3>
+                <p>בניית דפי נחיתה מעוצבים לקליטת לידים ולפרסום העסק</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <h2>רוצים לשמוע עוד?</h2>
+        <p>השאירו פרטים ונחזור אליכם עם פתרונות מותאמים במיוחד לעסק שלכם</p>
+     <div style="width:100%;height:500px;" data-fillout-id="21p28y8DtJus" data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize></div><script src="https://server.fillout.com/embed/v1/"></script>
+    </section>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+	<p Style="display:none">אוטומציה עסקית רות סוכו רות סוכובולסקי רות סוחו וויז אוטומטור וויזאוטומטור ויזאוטומטור ויז אוטומטור אוטומציות חכמות לעסקים חכמים אוטומציה לעסקים חכמים חיפושים כלליים על אוטומציה עסקית
+🔹 מה זה אוטומציה עסקית?
+🔹 איך לשפר את היעילות בעסק עם אוטומציה?
+🔹 פתרונות אוטומציה לעסקים קטנים
+🔹 איך לחסוך זמן עם אוטומציה עסקית?
+🔹 מדריך לאוטומציה עסקית
+
+אוטומציה לשיווק ומכירות
+🔹 מערכת דיוור אוטומטי לעסק
+🔹 איך לשלוח ניוזלטר אוטומטי?
+🔹 כלים לאוטומציה של לידים
+🔹 איך ליצור משפך מכירה אוטומטי?
+🔹 תוכנות מומלצות לאוטומציה שיווקית
+
+אוטומציה לניהול לקוחות ו-CRM
+🔹 איך לסנכרן וואטסאפ עם CRM?
+🔹 חיבור אוטומטי בין טפסי לידים ל-CRM
+🔹 מערכת CRM עם אוטומציה מתקדמת
+🔹 איך להכניס לקוחות חדשים למערכת אוטומטית?
+🔹 ניהול לקוחות אוטומטי לעסק קטן
+
+אוטומציה לניהול יומן ותורים
+🔹 מערכת חכמה לקביעת פגישות אוטומטית
+🔹 איך ליצור מערכת זימון תורים אוטומטית?
+🔹 תזכורות אוטומטיות לפגישות
+🔹 סנכרון אוטומטי בין יומן גוגל למערכת ניהול
+
+אוטומציה פיננסית וחשבונאות
+🔹 איך להוציא חשבוניות אוטומטיות?
+🔹 תוכנה לניהול תשלומים אוטומטיים
+🔹 איך לסנכרן בין בנק לתוכנת הנהלת חשבונות?
+🔹 דוחות פיננסיים אוטומטיים לעסק
+
+כלים ותוכנות לאוטומציה עסקית
+🔹 איזו מערכת אוטומציה מומלצת לעסקים?
+🔹 השוואה בין Zapier ל-Make
+🔹 איך לחבר בין מערכות עסקיות עם אינטגרציות?
+🔹 אוטומציה בוואטסאפ – איך זה עובד?</p>
+</body>
+</html>

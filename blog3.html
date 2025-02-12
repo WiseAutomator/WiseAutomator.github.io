@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>איך אוטומציה עסקית תשדרג לכם את העסק?</title>
+    <style>
+	
+   :root {
+            --primary: #D35400;
+            --secondary: #E67E22;
+            --text: #1f2937;
+            --light: #fdf6f0;
+            --dark: #121212;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--light);
+        }
+
+        .nav {
+            background: var(--dark);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            width: 150px;
+            height: auto;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .header {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--dark);
+            color: white;
+        }
+
+        .header h1 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .portfolio-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 200px;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .portfolio-content {
+            padding: 1.5rem;
+        }
+
+        .portfolio-content h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+			text-align: center;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--light);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            margin: 0.25rem;
+            color: var(--primary);
+        }
+		p{
+			margin-bottom: 1rem;
+		}
+		logoImg{
+			width: 100%;
+			height: -webkit-fill-available;
+			padding: !important 0px;
+		}
+		.nav-logo {
+			width: 393px;
+			height: auto;
+		}
+	@media (max-width: 768px) {
+		.nav-logo {
+			width: 120px;
+		}
+	}
+	article.portfolio-item.aos-init.aos-animate {
+    cursor: pointer;
+}
+
+        body { font-family: Arial, sans-serif; direction: rtl; text-align: right;background-color: #f9f9f9; }
+        h1 {     
+			color: #dd2903;
+			text-align: center; }
+        p { font-size: 18px; color: #333; }
+        .imgC { width: 100%; max-width: 600px; display: block; margin: 10px auto; border-radius: 10px; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <img src="./לוגו.png" alt="WiseAutomator" class="nav-logo logoImg">
+        <a href="./index.html" class="nav-link">חזרה לדף הבית</a>
+    </nav>
+	 <div class="container">
+        <h1>למה אוטומציה עסקית היא חובה?</h1>
+        <img src="./3.webp" alt="גרפים ונתונים" class="imgC">
+        <p>תארו לכם שהעסק שלכם עובד בשבילכם גם בזמן שאתם ישנים. לא, זה לא מדע בדיוני – זו אוטומציה עסקית! במקום לשלוח הצעות מחיר ידנית, לנהל רישומי מלאי ולרדוף אחרי לקוחות שלא שילמו – האוטומציה תדאג שהכל יקרה כמו קסם (רק בלי גלימה ושרביט).</p>
+        <p>אבל למה בעצם כל כך חשוב להכניס אוטומציה לעסק? הנה כמה סיבות שישכנעו אתכם:</p>
+        <ul>
+            <li><strong>חיסכון בזמן:</strong> תהליכים ידניים לוקחים זמן יקר, ואנחנו יודעים שהזמן שלכם שווה כסף!</li>
+            <li><strong>פחות טעויות:</strong> גם למקצוענים קורה שמזמינים לקוח בשם הלא נכון, אבל תוכנה לא שוכחת.</li>
+            <li><strong>חוויית לקוח טובה יותר:</strong> תשובות מהירות, שירות מקצועי ומעקב מסודר גורמים ללקוחות שלכם לחזור.</li>
+            <li><strong>הפחתת עומס:</strong> למה לשבור את הראש על משימות שחוזרות על עצמן אם אפשר לתת לרובוטים לעשות זאת?</li>
+        </ul>
+        <p>אז בפעם הבאה שאתם מתלבטים אם כדאי להשקיע באוטומציה, תזכרו – היא לא מחליפה אתכם, היא עוזרת לכם להיות טובים יותר במה שאתם עושים! 🚀</p>
+    </div>
+   
+</body>
+</html>
+
+</html>

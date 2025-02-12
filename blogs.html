@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מאמרים | WiseAutomator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #D35400;
+            --secondary: #E67E22;
+            --text: #1f2937;
+            --light: #fdf6f0;
+            --dark: #121212;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--light);
+        }
+
+        .nav {
+            background: var(--dark);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            width: 150px;
+            height: auto;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .header {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--dark);
+            color: white;
+        }
+
+        .header h1 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .portfolio-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 200px;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .portfolio-content {
+            padding: 1.5rem;
+        }
+
+        .portfolio-content h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+			text-align: center;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--light);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            margin: 0.25rem;
+            color: var(--primary);
+        }
+		p{
+			margin-bottom: 1rem;
+		}
+		img{
+			width: 100%;
+			height: -webkit-fill-available;
+		}
+		.nav-logo {
+			width: 393px;
+			height: auto;
+		}
+	@media (max-width: 768px) {
+		.nav-logo {
+			width: 120px;
+		}
+	}
+	article.portfolio-item.aos-init.aos-animate {
+    cursor: pointer;
+}
+		
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <img src="./לוגו.png" alt="WiseAutomator" class="nav-logo">
+        <a href="./index.html" class="nav-link">חזרה לדף הבית</a>
+    </nav>
+
+    <header class="header">
+        <h1>מאמרים על אוטומציה</h1>
+        <p>במאמרים הבאים נסביר לכם מהי אוטומציה עסקית ואיך היא יכולה לסייע לעסק שלכם</p>
+    </header>
+
+    <main class="portfolio-grid">
+        <!-- דוגמה לפרויקט -->
+		
+        <article class="portfolio-item" data-aos="fade-up" onclick="window.location.href='blog1.html';" >
+            <div class="portfolio-image">
+                <img src="./2.webp" alt="תמונה של הפרויקט">
+            </div>
+            <div class="portfolio-content">
+                <h3>העסק שלך תקוע בעבר? הגיע הזמן לשדרג אותו לעידן הדיגיטלי!</h3>
+                <p>בעלי עסקים יקרים, בואו נדבר רגע בכנות: אם אתם עדיין מעתיקים טלפונים ממיילים לוואטסאפ ידנית, שולחים חשבוניות כמו פעם עם נוצה ודיו (טוב, אולי לא עד כדי כך), או מזכירים ללקוחות לשלם לכם בפתקים – יש לנו חדשות בשבילכם: הגיע הזמן להתקדם!</p>
+            </div>
+        </article>
+		 <article class="portfolio-item" data-aos="fade-up" onclick="window.location.href='blog2.html';">
+            <div class="portfolio-image">
+                <img src="./o26bQXwX5bGSipzCa9Bh--2--c9j0o.jpg" alt="תמונה של הפרויקט">
+            </div>
+            <div class="portfolio-content">
+                <h3>העסק שלך צריך חופשה – וזה בדיוק מה שאוטומציה תעשה עבורו!</h3>
+                <p>דמיינו רגע שיש לכם בעסק עובד חרוץ, מסור, לא מבקש חופשים, לא חולה, לא מתלונן, ובעיקר – עושה בדיוק את מה שצריך, בלי לשכוח ובלי לעגל פינות. נשמע חלום, נכון? ובכן, קוראים לחלום הזה "אוטומציה עסקית"!</p>
+            </div>
+        </article>
+		<article class="portfolio-item" data-aos="fade-up" onclick="window.location.href='blog3.html';">
+            <div class="portfolio-image">
+                <img src="3.webp" alt="תמונה של הפרויקט">
+            </div>
+            <div class="portfolio-content">
+                <h3>למה אוטומציה עסקית היא חובה?</h3>
+                <p>תארו לכם שהעסק שלכם עובד בשבילכם גם בזמן שאתם ישנים. לא, זה לא מדע בדיוני – זו אוטומציה עסקית! במקום לשלוח הצעות מחיר ידנית, לנהל רישומי מלאי ולרדוף אחרי לקוחות שלא שילמו – האוטומציה תדאג שהכל יקרה כמו קסם (רק בלי גלימה ושרביט).</p>
+            </div>
+        </article>
+		<article class="portfolio-item" data-aos="fade-up" onclick="window.location.href='blog4.html';">
+            <div class="portfolio-image">
+                <img src="./Kl1DNCjahOTDo2yN2gva--0--p1kue.jpg" alt="תמונה של הפרויקט">
+            </div>
+            <div class="portfolio-content">
+                <h3>נמאס לכם להתעסק עם משימות חוזרות ונשנות? יש לנו חדשות טובות! 🤖</h3>
+                <p>תארו לעצמכם כמה זמן אתם מבזבזים בכל יום על משימות שגרתיות: מילוי טפסים, שליחת מיילים, תזכורות ללקוחות, עדכון רשומות ועוד. זה גוזל אנרגיה, מעכב את הצמיחה העסקית שלכם ומשאיר אתכם עם פחות זמן להתמקד במה שבאמת חשוב – פיתוח העסק והגדלת הרווחים.</p>
+            </div>
+        </article>
+
+        <!-- [ניתן להוסיף עוד פרויקטים באותו מבנה] -->
+    </main>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>

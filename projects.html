@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תיק עבודות | WiseAutomator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #D35400;
+            --secondary: #E67E22;
+            --text: #1f2937;
+            --light: #fdf6f0;
+            --dark: #121212;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--light);
+        }
+
+        .nav {
+            background: var(--dark);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            width: 150px;
+            height: auto;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .header {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--dark);
+            color: white;
+        }
+
+        .header h1 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .portfolio-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 200px;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .portfolio-content {
+            padding: 1.5rem;
+        }
+
+        .portfolio-content h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+			text-align: center;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--light);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            margin: 0.25rem;
+            color: var(--primary);
+        }
+		p{
+			margin-bottom: 1rem;
+		}
+		img{
+			width: 100%;
+			height: -webkit-fill-available;
+		}
+		.nav-logo {
+			width: 393px;
+			height: auto;
+		}
+	@media (max-width: 768px) {
+		.nav-logo {
+			width: 120px;
+		}
+	}
+		
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <img src="./לוגו.png" alt="WiseAutomator" class="nav-logo">
+        <a href="./index.html" class="nav-link">חזרה לדף הבית</a>
+    </nav>
+
+    <header class="header">
+        <h1>תיק עבודות</h1>
+        <p>הפרויקטים המובילים שלנו בתחום האוטומציה העסקית</p>
+    </header>
+
+    <main class="portfolio-grid">
+        <!-- דוגמה לפרויקט -->
+        <article class="portfolio-item" data-aos="fade-up">
+            <div class="portfolio-image">
+                <img src="./לידים.webp" alt="תמונה של הפרויקט">
+            </div>
+            <div class="portfolio-content">
+                <h3>אוטומציה לקליטת לידים בוואטצאפ למערכת CRM</h3>
+                <p>המערכת מאזינה להודעות חדשות של לקוחות בוואטצאפ ומגדירה אותו כליד חדש במערכת CRM של הלקוח</p>
+                <div class="tags">
+                    <span class="tag">אוטומציה</span>
+                    <span class="tag">אינטגרציה</span>
+					 <span class="tag">CRM</span>
+                </div>
+            </div>
+        </article>
+		 <article class="portfolio-item" data-aos="fade-up">
+            <div class="portfolio-image">
+                <img src="./קהילה.webp" alt="תמונה של הפרויקט">
+            </div>
+            <div class="portfolio-content">
+                <h3>אוטומציית דיוור לקהילה וקליטת חברים חדשים</h3>
+                <p>המערכת קולטת חברים חדשים אוטומטית בהודעות מייל ושולחת דיוור אוטומטי שבועי</p>
+                <div class="tags">
+                    <span class="tag">אוטומציה</span>
+                    <span class="tag">אינטגרציה</span>
+                </div>
+            </div>
+        </article>
+		<article class="portfolio-item" data-aos="fade-up">
+            <div class="portfolio-image">
+                <img src="./פגישה.webp" alt="תמונה של הפרויקט">
+            </div>
+            <div class="portfolio-content">
+                <h3>מערכת חכמה לניהול תורים</h3>
+                <p>מערכת אוטומטית לקביעת תורים עם סינכרון ליומן ורישום לקוח במערכת הCRM</p>
+                <div class="tags">
+                    <span class="tag">אוטומציה</span>
+                    <span class="tag">אינטגרציה</span>
+					<span class="tag">CRM</span>
+                </div>
+            </div>
+        </article>
+		<article class="portfolio-item" data-aos="fade-up">
+            <div class="portfolio-image">
+                <img src="./CRM.webp" alt="תמונה של הפרויקט">
+            </div>
+            <div class="portfolio-content">
+                <h3>CRM לניהול לקוחות ומסע לקוח</h3>
+                <p>מערכת CRM מותאמת אישית למכירות כולל אוטומציות מובנות וטפסי חתימה מקוונים עם קישורים לתשלום במערכת סליקה</p>
+                <div class="tags">
+                    <span class="tag">אוטומציה</span>
+                    <span class="tag">אינטגרציה</span>
+					<span class="tag">CRM</span>
+					<span class="tag">סליקה</span>
+					<span class="tag">טפסים וחתימות דיגיטליים</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- [ניתן להוסיף עוד פרויקטים באותו מבנה] -->
+    </main>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
