@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="logoIcon.png?aspect_ratio=1:1&width=48&format=png" type="image/x-icon">
+    <link rel="icon" href="logoIcon.png?aspect_ratio=1:1&width=48&format=png" type="image/x-icon">
+    <title>אודות | WiseAutomator</title>
+    <meta name="description" content="רות סוכובולסקי - מומחית לאוטומציות עסקיות עם ניסיון בפיתוח תוכנה בחברות הייטק מובילות." />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+        
+    <style>
+        :root {
+            --primary: #D35400;
+            --secondary: #E67E22;
+            --text: #1f2937;
+            --light: #fdf6f0;
+            --dark: #121212;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+            scroll-behavior: smooth;
+            text-align: center;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text);
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            background: var(--dark);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav-logo {
+            width: 393px;
+            height: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary);
+        }
+
+        .nav-link.portfolio {
+            background: var(--primary);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+        }
+
+        .nav-link.portfolio:hover {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .about-section {
+            padding: 10rem 2rem 4rem;
+            background-color: white;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .about-content {
+            text-align: right;
+        }
+
+        .about-content h1 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .expertise-section {
+            background-color: var(--light);
+            padding: 4rem 2rem;
+        }
+
+        .expertise-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .expertise-header h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .expertise-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .expertise-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .expertise-item img {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 1rem;
+        }
+
+        .expertise-item h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .contact-section {
+            background: var(--dark);
+            padding: 4rem 2rem;
+            text-align: center;
+            color: white;
+        }
+
+        .contact-section h2 {
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-button {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1.5rem;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .contact-button:hover {
+            transform: scale(1.05);
+            background: var(--secondary);
+        }
+
+        @media (max-width: 768px) {
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image-container {
+                order: -1;
+            }
+
+            .nav {
+                padding: 0.5rem 1rem;
+            }
+
+            .nav-logo {
+                width: 120px;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .about-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <img src="./לוגו.png" alt="WiseAutomator" class="nav-logo">
+        <div class="nav-links">
+            <a href="./index.html" class="nav-link">דף הבית</a>
+            <a href="./projects.html" class="nav-link">תיק עבודות</a>
+            <a href="./blogs.html" class="nav-link">בלוג</a>
+            <a href="#contact" class="nav-link portfolio">לייעוץ חינם!</a>
+        </div>
+    </nav>
+
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-content" data-aos="fade-left">
+                <h1>היי, נעים להכיר אני רות סוכובולסקי</h1>
+                <p>
+                    בעלת ניסיון רב בפיתוח תוכנה בחברות הייטק מובילות, ומומחית לאוטומציות עסקיות חכמות.
+                </p>
+                <p>
+                    במהלך השנים, נחשפתי לטכנולוגיות מתקדמות ולמדתי לעומק איך הן יכולות לשפר תהליכים עסקיים. בשלב מסוים גיליתי את תחום האוטומציה העסקית, והבנתי את הפוטנציאל העצום שהוא מציע.
+                </p>
+                <p>
+                    היום, אני מתמקדת בהבאת הפתרונות האוטומטיים המתקדמים ביותר לעסקים, מתוך אמונה שהם יכולים להוביל לשיפור משמעותי ביעילות, בחיסכון בזמן ובהצלחה עסקית.
+                </p>
+                <p>
+                    אני בטוחה שאוכל לסייע גם לכם להצעיד את העסק שלכם קדימה ולהפוך אותו לחכם ויעיל יותר.
+                </p>
+            </div>
+            <div class="about-image-container" data-aos="fade-right">
+                <img src="./me.jpg" alt="רות סוכובולסקי - מומחית לאוטומציות עסקיות" class="about-image">
+            </div>
+        </div>
+    </section>
+
+    <section class="expertise-section">
+        <div class="expertise-header">
+            <h2>ההתמחויות שלי</h2>
+            <p>הניסיון והידע שאני מביאה לשולחן העבודה</p>
+        </div>
+        <div class="expertise-grid">
+            <div class="expertise-item" data-aos="fade-up">
+                <img src="./bot.png" alt="פיתוח תוכנה">
+                <h3>פיתוח תוכנה</h3>
+                <p>ניסיון רב בפיתוח תוכנה ובניית מערכות מורכבות לצרכים עסקיים</p>
+            </div>
+            <div class="expertise-item" data-aos="fade-up" data-aos-delay="100">
+                <img src="./automated.png" alt="אוטומציה">
+                <h3>אוטומציות עסקיות</h3>
+                <p>מומחית בבניית תהליכים אוטומטיים שחוסכים זמן וכסף לעסקים</p>
+            </div>
+            <div class="expertise-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="./AI.png" alt="בינה מלאכותית">
+                <h3>פתרונות AI</h3>
+                <p>יישום של פתרונות בינה מלאכותית מתקדמים להאצת תהליכים עסקיים</p>
+            </div>
+            <div class="expertise-item" data-aos="fade-up" data-aos-delay="300">
+                <img src="./data-transformation.png" alt="אינטגרציות">
+                <h3>אינטגרציות מערכות</h3>
+                <p>חיבור בין מערכות קיימות ליצירת זרימת עבודה חלקה ואפקטיבית</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>בואו נצעיד את העסק שלכם קדימה</h2>
+        <p>יש לכם שאלות? רוצים לדעת כיצד אוטומציה יכולה לשפר את העסק שלכם?</p>
+        <a href="./index.html#contact" class="contact-button">
+            לייעוץ ראשוני ללא עלות
+        </a>
+    </section>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
