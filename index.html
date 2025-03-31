@@ -22,6 +22,16 @@
     gtag('js', new Date());
     gtag('config', 'G-54JCYXDQVL');
   </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        menuToggle.addEventListener("click", function() {
+            navLinks.classList.toggle("open");
+        });
+    });
+</script>
     <style>
         :root {
             --primary: #D35400;
@@ -329,16 +339,49 @@
 		.logoImg{
 				width: 100%;
 			}
+	    			.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: var(--dark);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+}
     </style>
 </head>
 <body>
     <nav class="nav">
         <img src="./לוגו.png" alt="WiseAutomator" class="nav-logo">
+	<a href="#contact" class="nav-link portfolio">לייעוץ חינם!</a>
+	<button class="menu-toggle" aria-label="פתח תפריט">&#9776;</button>
+	    
         <div class="nav-links">
            <a href="./blogs.html" class="nav-link" >בלוג</a>
 	   <a href="./about.html" class="nav-link" >קצת עליי</a>
 	   <a href="./projects.html" class="nav-link" >תיק עבודות</a>
-           <a href="#contact" class="nav-link portfolio">לייעוץ חינם!</a>
+          
         </div>
     </nav>
 
